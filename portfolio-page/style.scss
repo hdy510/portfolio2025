@@ -1,0 +1,365 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: bold;
+    font-style: bold;
+}
+
+// 변수설정
+$font-family-medium: 'GmarketSansMedium';
+$font-family-bold: 'GmarketSansBold';
+$font-size-42: 2.625rem;
+$font-size-32: 2rem;
+$font-size-24: 1.5rem;
+$font-size-22: 1.375rem;
+$font-size-20: 1.25rem;
+$font-size-18: 1.125rem;
+$font-size-16: 1rem;
+$font-size-14: 0.875rem;
+$font-size-12: 0.75rem;
+$color-blue-main: #1a5ae4;
+$color-yellow-main: #FFC64A;
+$color-blue-title: #6796fb;
+$color-blue-text: #496092;
+$color-gray-text: #7c7c7c;
+
+
+
+/* 전체설정 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $font-family-medium;
+    color: #0d0d0d;
+}
+body {
+    background-color: #fdfdfd;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+ul,ol {
+    list-style: none;
+}
+img {
+    vertical-align: bottom;
+}
+
+/* header 설정 */
+header {
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    z-index: 100;
+    background-color: #fdfdfd;
+    .header-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        max-width: 1620px;
+        margin: 0 auto;
+        .logo {
+            a {
+                img {
+                    width: 7.063rem;
+                }
+            }
+        }
+        .menu {
+            display: flex;
+            li {
+                font-size: $font-size-18;
+                cursor: pointer;
+                line-height: 1;
+                padding: 1.313rem 2.813rem;
+                color: $color-gray-text;
+                &.on {
+                    color: #0d0d0d;
+                }
+            }
+        }
+    }
+}
+
+/* main 설정 */
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .txtBox {
+        margin-left: -32rem;
+        .year {
+            font-size: 3.125rem;
+            font-family: $font-family-bold;
+            position: relative;
+            span {
+                display: block;
+                border-radius: 50%;
+                width: 3.75rem;
+                height: 3.75rem;
+                background-color: $color-yellow-main;
+                position: absolute;
+                top: -1.4rem;
+                left: -1.7rem;
+                z-index: -1;
+            }
+        }
+        h1 {
+            font-size: 5.313rem;
+            font-family: $font-family-bold;
+            margin-bottom: 1rem;
+            b {
+                color: $color-blue-main;
+                font-family: $font-family-bold;
+            }
+        }
+        h2 {
+            font-size: 4rem;
+            font-family: $font-family-bold;
+            margin-bottom: 4.75rem;
+        }
+        .desciprtion {
+            font-size: $font-size-24;
+            color: $color-gray-text;
+            line-height: 2;
+        }
+    }
+    .scrollDown {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        span {
+            font-size: $font-size-14;
+            color: $color-gray-text;
+            margin-bottom: 0.5rem;
+        }
+        .mouse {
+            background-image: url(src/mouse.png);
+            background-size: 2.125rem 3.188rem;
+            width: 2.125rem;
+            height: 3.188rem;
+            margin-bottom: 0.5rem;
+        }
+        .arrowBox {
+            li {
+                background-image: url(src/scrollDownArrow.png);
+                background-size: 1.375rem 0.625rem;
+                width: 1.375rem;
+                height: 0.625rem;
+                &:nth-child(2) {
+                    opacity: 0.5;
+                }
+                &:nth-child(3) {
+                    opacity: 0.25;
+                }
+            }
+        }
+    }
+    img {
+        position: absolute;
+        &.main {
+            right: -4rem;
+            bottom: -24rem;
+        }
+        &.blur {
+            width: 16rem;
+            top: 6rem;
+            right: 4rem;
+            transform: scaleX(-1);
+            z-index: -1;
+            filter: blur(0.75rem);
+            opacity: 0.8;
+        }
+    }
+}
+
+/* about me 설정 */
+.aboutMe {
+    display: flex;
+    justify-content: center;
+    padding-top: 6rem;
+    .cardWrap {
+        width: 76.5rem;
+        height: 69.438rem;
+        position: relative;
+        .card {
+            background-color: rgba(26, 90, 228, 0.07);
+            border-radius: 2rem;
+            border: 0.125rem solid rgba(238, 243, 255, 0.07);
+            backdrop-filter: blur($font-size-12);
+            -webkit-backdrop-filter: blur($font-size-12);
+            height: 100%;
+            position: relative;
+        }
+        .txtBox {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: 7.125rem 9.188rem;
+            h3 {
+                color: $color-blue-title;
+                font-family: $font-family-bold;
+                font-size: $font-size-42;
+                text-align: center;
+                margin-bottom: 4.375rem;
+            }
+            > p {
+                color: $color-blue-text;
+                font-size: $font-size-22;
+                text-align: center;
+                line-height: 2;
+                margin-bottom: 5.5rem;
+            }
+            .bottomBox {
+                .box1 {
+                    .listDepth1 {
+                        > li {
+                            margin-bottom: 2.375rem;
+                            .listDepth2 {
+                                display: flex;
+                                li {
+                                    &.title {
+                                        font-size: $font-size-22;
+                                        color: $color-blue-title;
+                                        width: 12.75rem;
+                                    }
+                                    &.desciprtion {
+                                        font-size: $font-size-18;
+                                        color: $color-blue-text;
+                                        line-height: 2.2;
+                                        margin-top: -0.313rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .box2 {
+                    .listDepth1 {
+                        > li {
+                            margin-bottom: 2.375rem;
+                            p {
+                                font-size: $font-size-22;
+                                color: $color-blue-title;
+                                margin-bottom: 2.125rem;
+                            }
+                            .listDepth2 {
+                                display: flex;
+                                flex-wrap: wrap;
+                                margin-left: 2.125rem;
+                                max-width: 56rem;
+                                li {
+                                    color: $color-blue-title;
+                                    font-size: $font-size-18;
+                                    padding: 1rem 1.5rem;
+                                    background-color: #fdfdfd;
+                                    border-radius: 3rem;
+                                    border: 0.063rem solid #DBE6FF;
+                                    margin-right: 0.625rem;
+                                    margin-bottom: 0.75rem;
+                                    display: flex;
+                                    align-items: center;
+                                    &.icon {
+                                        i {
+                                            background-image: url(src/skillsIcons.png);
+                                            background-size: 20.75rem 1.938rem;
+                                            margin-right: 0.625rem;
+                                        }
+                                        &:nth-child(1) {
+                                            i {
+                                                width: 1.063rem;
+                                                height: 1.938rem;
+                                            }
+                                        }
+                                        &:nth-child(2) {
+                                            i {
+                                                width: 1.813rem;
+                                                height: 1.903rem;
+                                                background-position: -1.688rem 0;
+                                            }
+                                        }
+                                        &:nth-child(3) {
+                                            i {
+                                                width: 1.688rem;
+                                                height: 1.625rem;
+                                                background-position: -4.125rem 0;
+                                            }
+                                        }
+                                        &:nth-child(4) {
+                                            i {
+                                                width: 1.063rem;
+                                                height: 1.875rem;
+                                                background-position: -6.438rem 0;
+                                            }
+                                        }
+                                        &:nth-child(5) {
+                                            i {
+                                                width: 1.063rem;
+                                                height: 1.875rem;
+                                                background-position: -8.125rem 0;
+                                            }
+                                        }
+                                        &:nth-child(6) {
+                                            i {
+                                                width: 1.688rem;
+                                                height: 1.688rem;
+                                                background-position: -9.813rem 0;
+                                            }
+                                        }
+                                        &:nth-child(7) {
+                                            i {
+                                                width: 1.688rem;
+                                                height: 1.688rem;
+                                                background-position: -12.125rem 0;
+                                            }
+                                        }
+                                        &:nth-child(8) {
+                                            i {
+                                                width: 1.75rem;
+                                                height: 1.75rem;
+                                                background-position: -14.438rem 0;
+                                            }
+                                        }
+                                        &:nth-child(9) {
+                                            i {
+                                                width: 1.688rem;
+                                                height: 1.75rem;
+                                                background-position: -16.75rem 0;
+                                            }
+                                        }
+                                        &:nth-child(10) {
+                                            i {
+                                                width: 1.688rem;
+                                                height: 1.688rem;
+                                                background-position: -19.063rem 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

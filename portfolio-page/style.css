@@ -1,0 +1,307 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: bold;
+  font-style: bold;
+}
+/* 전체설정 */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "GmarketSansMedium";
+  color: #0d0d0d;
+}
+
+body {
+  background-color: #fdfdfd;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+/* header 설정 */
+header {
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  z-index: 100;
+  background-color: #fdfdfd;
+}
+header .header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 1620px;
+  margin: 0 auto;
+}
+header .header-wrap .logo a img {
+  width: 7.063rem;
+}
+header .header-wrap .menu {
+  display: flex;
+}
+header .header-wrap .menu li {
+  font-size: 1.125rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 1.313rem 2.813rem;
+  color: #7c7c7c;
+}
+header .header-wrap .menu li.on {
+  color: #0d0d0d;
+}
+
+/* main 설정 */
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+main .txtBox {
+  margin-left: -32rem;
+}
+main .txtBox .year {
+  font-size: 3.125rem;
+  font-family: "GmarketSansBold";
+  position: relative;
+}
+main .txtBox .year span {
+  display: block;
+  border-radius: 50%;
+  width: 3.75rem;
+  height: 3.75rem;
+  background-color: #FFC64A;
+  position: absolute;
+  top: -1.4rem;
+  left: -1.7rem;
+  z-index: -1;
+}
+main .txtBox h1 {
+  font-size: 5.313rem;
+  font-family: "GmarketSansBold";
+  margin-bottom: 1rem;
+}
+main .txtBox h1 b {
+  color: #1a5ae4;
+  font-family: "GmarketSansBold";
+}
+main .txtBox h2 {
+  font-size: 4rem;
+  font-family: "GmarketSansBold";
+  margin-bottom: 4.75rem;
+}
+main .txtBox .desciprtion {
+  font-size: 1.5rem;
+  color: #7c7c7c;
+  line-height: 2;
+}
+main .scrollDown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .scrollDown span {
+  font-size: 0.875rem;
+  color: #7c7c7c;
+  margin-bottom: 0.5rem;
+}
+main .scrollDown .mouse {
+  background-image: url(src/mouse.png);
+  background-size: 2.125rem 3.188rem;
+  width: 2.125rem;
+  height: 3.188rem;
+  margin-bottom: 0.5rem;
+}
+main .scrollDown .arrowBox li {
+  background-image: url(src/scrollDownArrow.png);
+  background-size: 1.375rem 0.625rem;
+  width: 1.375rem;
+  height: 0.625rem;
+}
+main .scrollDown .arrowBox li:nth-child(2) {
+  opacity: 0.5;
+}
+main .scrollDown .arrowBox li:nth-child(3) {
+  opacity: 0.25;
+}
+main img {
+  position: absolute;
+}
+main img.main {
+  right: -4rem;
+  bottom: -24rem;
+}
+main img.blur {
+  width: 16rem;
+  top: 6rem;
+  right: 4rem;
+  transform: scaleX(-1);
+  z-index: -1;
+  filter: blur(0.75rem);
+  opacity: 0.8;
+}
+
+/* about me 설정 */
+.aboutMe {
+  display: flex;
+  justify-content: center;
+  padding-top: 6rem;
+}
+.aboutMe .cardWrap {
+  width: 76.5rem;
+  height: 69.438rem;
+  position: relative;
+}
+.aboutMe .cardWrap .card {
+  background-color: rgba(26, 90, 228, 0.07);
+  border-radius: 2rem;
+  border: 0.125rem solid rgba(238, 243, 255, 0.07);
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
+  height: 100%;
+  position: relative;
+}
+.aboutMe .cardWrap .txtBox {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 7.125rem 9.188rem;
+}
+.aboutMe .cardWrap .txtBox h3 {
+  color: #6796fb;
+  font-family: "GmarketSansBold";
+  font-size: 2.625rem;
+  text-align: center;
+  margin-bottom: 4.375rem;
+}
+.aboutMe .cardWrap .txtBox > p {
+  color: #496092;
+  font-size: 1.375rem;
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 5.5rem;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box1 .listDepth1 > li {
+  margin-bottom: 2.375rem;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box1 .listDepth1 > li .listDepth2 {
+  display: flex;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box1 .listDepth1 > li .listDepth2 li.title {
+  font-size: 1.375rem;
+  color: #6796fb;
+  width: 12.75rem;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box1 .listDepth1 > li .listDepth2 li.desciprtion {
+  font-size: 1.125rem;
+  color: #496092;
+  line-height: 2.2;
+  margin-top: -0.313rem;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li {
+  margin-bottom: 2.375rem;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li p {
+  font-size: 1.375rem;
+  color: #6796fb;
+  margin-bottom: 2.125rem;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li .listDepth2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 2.125rem;
+  max-width: 56rem;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li .listDepth2 li {
+  color: #6796fb;
+  font-size: 1.125rem;
+  padding: 1rem 1.5rem;
+  background-color: #fdfdfd;
+  border-radius: 3rem;
+  border: 0.063rem solid #DBE6FF;
+  margin-right: 0.625rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li .listDepth2 li.icon i {
+  background-image: url(src/skillsIcons.png);
+  background-size: 20.75rem 1.938rem;
+  margin-right: 0.625rem;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li .listDepth2 li.icon:nth-child(1) i {
+  width: 1.063rem;
+  height: 1.938rem;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li .listDepth2 li.icon:nth-child(2) i {
+  width: 1.813rem;
+  height: 1.903rem;
+  background-position: -1.688rem 0;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li .listDepth2 li.icon:nth-child(3) i {
+  width: 1.688rem;
+  height: 1.625rem;
+  background-position: -4.125rem 0;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li .listDepth2 li.icon:nth-child(4) i {
+  width: 1.063rem;
+  height: 1.875rem;
+  background-position: -6.438rem 0;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li .listDepth2 li.icon:nth-child(5) i {
+  width: 1.063rem;
+  height: 1.875rem;
+  background-position: -8.125rem 0;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li .listDepth2 li.icon:nth-child(6) i {
+  width: 1.688rem;
+  height: 1.688rem;
+  background-position: -9.813rem 0;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li .listDepth2 li.icon:nth-child(7) i {
+  width: 1.688rem;
+  height: 1.688rem;
+  background-position: -12.125rem 0;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li .listDepth2 li.icon:nth-child(8) i {
+  width: 1.75rem;
+  height: 1.75rem;
+  background-position: -14.438rem 0;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li .listDepth2 li.icon:nth-child(9) i {
+  width: 1.688rem;
+  height: 1.75rem;
+  background-position: -16.75rem 0;
+}
+.aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li .listDepth2 li.icon:nth-child(10) i {
+  width: 1.688rem;
+  height: 1.688rem;
+  background-position: -19.063rem 0;
+}/*# sourceMappingURL=style.css.map */
