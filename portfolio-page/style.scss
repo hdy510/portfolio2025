@@ -432,7 +432,6 @@ main {
                 line-height: 1.5;
                 padding: 0.725rem;
                 &.on {
-                    font-family: $font-family-bold;
                     color: $color-blue-title;
                     &::after {
                         content: "";
@@ -451,147 +450,151 @@ main {
                 }
             }
         }
-        .contentsBox {
-            display: flex;
-            justify-content: center;
-            .imgBox {
-                width: 34.438rem;
-                height: 24.5rem;
-                border-radius: 0.75rem;
-                margin-right: 6.688rem;
-                overflow: hidden;
-                position: relative;
-                img {
-                    width: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    z-index: 1;
-                }
-                .blur {
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba($color: $color-blue-main, $alpha: 0.2);
-                    backdrop-filter: blur(0.25rem);
-                    -webkit-backdrop-filter: blur(0.25rem);
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    z-index: 2;
-                    opacity: 0;
-                    transition: all 0.3s;
-                }
-                .btnBox {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    display: flex;
-                    justify-content: space-between;
-                    width: 70%;
-                    z-index: 3;
-                    opacity: 0;
-                    transition: all 0.3s;
-                    button {
-                        font-size: $font-size-18;
-                        background-color: $color-blue-main;
-                        color: #fdfdfd;
-                        padding: 1rem 1.5rem;
-                        border-radius: 3.125rem;
-                        border: 0.063rem solid $color-blue-main;
-                        cursor: pointer;
-                        transition: all 0.3s;
-                        i {
-                            color: #fdfdfd;
-                            transition: all 0.3s;
-                        }
-                        &:hover {
-                            background-color: #fdfdfd;
-                            border: 0.063rem solid #fdfdfd;
-                            color: $color-blue-main;
-                            i {
-                                color: $color-blue-main;
-                            }
-                        }
+        .contentsBoxWrap {
+            .contentsBox {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 10rem;
+                .imgBox {
+                    width: 34.438rem;
+                    height: 24.5rem;
+                    border-radius: 0.75rem;
+                    margin-right: 6.688rem;
+                    overflow: hidden;
+                    position: relative;
+                    img {
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 1;
                     }
-                    a {
-                        display: block;
-                        font-size: $font-size-18;
-                        background-color: $color-blue-main;
-                        color: #fdfdfd;
-                        padding: 1rem 1.5rem;
-                        border-radius: 3.125rem;
-                        border: 0.063rem solid $color-blue-main;
-                        cursor: pointer;
-                        transition: all 0.3s;
-                        i {
-                            color: #fdfdfd;
-                            transition: all 0.3s;
-                        }
-                        &:hover {
-                            background-color: #fdfdfd;
-                            border: 0.063rem solid #fdfdfd;
-                            color: $color-blue-main;
-                            i {
-                                color: $color-blue-main;
-                            }
-                        }
-                    }
-                }
-                &:hover {
                     .blur {
-                        opacity: 1;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba($color: $color-blue-main, $alpha: 0.2);
+                        backdrop-filter: blur(0.25rem);
+                        -webkit-backdrop-filter: blur(0.25rem);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 2;
+                        opacity: 0;
+                        transition: all 0.3s;
                     }
                     .btnBox {
-                        opacity: 1;
-                    }
-                }
-            }
-            .txtBox {
-                h4 {
-                    font-size: $font-size-30;
-                    color: $color-blue-text;
-                    margin-bottom: 2.625rem;
-                }
-                .detailDepth1 {
-                    > li {
-                        margin-bottom: 1.875rem;
-                        .detailDepth2 {
-                            display: flex;
-                            .title {
-                                font-size: $font-size-22;
-                                font-family: $font-family-bold;
-                                color: $color-blue-title;
-                                width: 8.563rem;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        display: flex;
+                        justify-content: space-between;
+                        width: 70%;
+                        z-index: 3;
+                        opacity: 0;
+                        transition: all 0.3s;
+                        button {
+                            font-size: $font-size-18;
+                            background-color: $color-blue-main;
+                            color: #fdfdfd;
+                            padding: 1rem 1.5rem;
+                            border-radius: 3.125rem;
+                            border: 0.063rem solid $color-blue-main;
+                            cursor: pointer;
+                            transition: all 0.3s;
+                            i {
+                                color: #fdfdfd;
+                                transition: all 0.3s;
                             }
-                            .desciprtion {
-                                font-size: $font-size-18;
-                                font-family: $font-family-medium;
-                                color: $color-blue-text;
+                            &:hover {
+                                background-color: #fdfdfd;
+                                border: 0.063rem solid #fdfdfd;
+                                color: $color-blue-main;
+                                i {
+                                    color: $color-blue-main;
+                                }
+                            }
+                        }
+                        a {
+                            display: block;
+                            font-size: $font-size-18;
+                            background-color: $color-blue-main;
+                            color: #fdfdfd;
+                            padding: 1rem 1.5rem;
+                            border-radius: 3.125rem;
+                            border: 0.063rem solid $color-blue-main;
+                            cursor: pointer;
+                            transition: all 0.3s;
+                            i {
+                                color: #fdfdfd;
+                                transition: all 0.3s;
+                            }
+                            &:hover {
+                                background-color: #fdfdfd;
+                                border: 0.063rem solid #fdfdfd;
+                                color: $color-blue-main;
+                                i {
+                                    color: $color-blue-main;
+                                }
                             }
                         }
                     }
-                }
-                .bottomBox {
-                    p {
-                        font-size: $font-size-22;
-                        font-family: $font-family-bold;
-                        color: $color-blue-title;
-                        margin-bottom: 1.875rem;
+                    &:hover {
+                        .blur {
+                            opacity: 1;
+                        }
+                        .btnBox {
+                            opacity: 1;
+                        }
                     }
-                    ul {
-                        display: flex;
-                        flex-wrap: wrap;
-                        max-width: 30rem;
-                        li {
-                            font-size: $font-size-18;
-                            font-family: $font-family-medium;
+                }
+                .txtBox {
+                    h4 {
+                        font-size: $font-size-30;
+                        color: $color-blue-text;
+                        margin-bottom: 2.625rem;
+                    }
+                    .detailDepth1 {
+                        > li {
+                            margin-bottom: 1.875rem;
+                            .detailDepth2 {
+                                display: flex;
+                                .title {
+                                    font-size: $font-size-22;
+                                    font-family: $font-family-bold;
+                                    color: $color-blue-title;
+                                    width: 8.563rem;
+                                }
+                                .desciprtion {
+                                    font-size: $font-size-18;
+                                    font-family: $font-family-medium;
+                                    color: $color-blue-text;
+                                }
+                            }
+                        }
+                    }
+                    .bottomBox {
+                        p {
+                            font-size: $font-size-22;
+                            font-family: $font-family-bold;
                             color: $color-blue-title;
-                            padding: 1rem 1.5rem;
-                            border: 0.063rem solid #DBE6FF;
-                            border-radius: 3.125rem;
-                            margin-right: 0.75rem;
-                            margin-bottom: 0.75rem;
+                            margin-bottom: 1.875rem;
+                        }
+                        ul {
+                            display: flex;
+                            flex-wrap: wrap;
+                            max-width: 30rem;
+                            margin-left: 0.875rem;
+                            li {
+                                font-size: $font-size-18;
+                                font-family: $font-family-medium;
+                                color: $color-blue-title;
+                                padding: 1rem 1.5rem;
+                                border: 0.063rem solid #DBE6FF;
+                                border-radius: 3.125rem;
+                                margin-right: 0.75rem;
+                                margin-bottom: 0.75rem;
+                            }
                         }
                     }
                 }
@@ -639,9 +642,6 @@ main {
             flex-direction: column;
             align-items: center;
             .link {
-                color: #fdfdfd;
-                font-size: $font-size-22;
-                font-family: $font-family-bold;
                 margin-bottom: 2.313rem;
                 display: flex;
                 align-items: center;
@@ -649,6 +649,11 @@ main {
                     color: #fdfdfd;
                     margin-right: 1.625rem;
                     font-size: $font-size-32;
+                }
+                b {
+                    color: #fdfdfd;
+                    font-size: $font-size-22;
+                    font-family: $font-family-bold;
                 }
             }
             .copy {
@@ -665,6 +670,29 @@ main {
                     border: 0.063rem solid #fdfdfd;
                     color: #113d9a;
                 }
+            }
+        }
+        .copy-message {
+            background-color: #fdfdfd;
+            box-shadow: 0 0.5rem 0.5rem rgba($color: #0b41b5, $alpha: 1.0);
+            color: $color-blue-main;
+            font-size: $font-size-18;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            white-space: nowrap;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            display: none;
+            i {
+                display: inline-block;
+                background-image: url(src/checkIcon.png);
+                background-size: 3rem 3rem;
+                width: 3rem;
+                height: 3rem;
             }
         }
     }
