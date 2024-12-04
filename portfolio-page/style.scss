@@ -18,6 +18,7 @@ $font-family-medium: 'GmarketSansMedium';
 $font-family-bold: 'GmarketSansBold';
 $font-size-42: 2.625rem;
 $font-size-32: 2rem;
+$font-size-30: 1.875rem;
 $font-size-24: 1.5rem;
 $font-size-22: 1.375rem;
 $font-size-20: 1.25rem;
@@ -198,7 +199,7 @@ main {
     padding-top: 6rem;
     .cardWrap {
         width: 76.5rem;
-        height: 69.438rem;
+        height: 72rem;
         position: relative;
         .card {
             background-color: rgba(26, 90, 228, 0.07);
@@ -356,6 +357,99 @@ main {
                                     }
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* portfolio 설정 */
+.portfolio {
+    margin-top: 8.438rem;
+    margin-bottom: 20.188rem;
+    .container {
+        width: 60%;
+        margin: 0 auto;
+        h3 {
+            font-size: $font-size-42;
+            color: $color-blue-title;
+            font-family: $font-family-bold;
+            text-align: center;
+            margin-bottom: 5.375rem;
+        }
+        .list {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5.063rem;
+            li {
+                font-size: $font-size-16;
+                font-family: $font-family-medium;
+                color: #adadad;
+                cursor: pointer;
+                &.on {
+                    font-family: $font-family-bold;
+                    color: $color-blue-title;
+                }
+            }
+        }
+        .contentsBox {
+            display: flex;
+            justify-content: center;
+            .imgBox {
+                width: 551px;
+                height: 392px;
+                background-color: rgb(255, 206, 206);
+                border-radius: 0.75rem;
+                margin-right: 6.688rem;
+                img {}
+            }
+            .txtBox {
+                h4 {
+                    font-size: $font-size-30;
+                    color: $color-blue-text;
+                    margin-bottom: 2.625rem;
+                }
+                .detailDepth1 {
+                    > li {
+                        margin-bottom: 1.875rem;
+                        .detailDepth2 {
+                            display: flex;
+                            .title {
+                                font-size: $font-size-22;
+                                font-family: $font-family-bold;
+                                color: $color-blue-title;
+                                width: 8.563rem;
+                            }
+                            .desciprtion {
+                                font-size: $font-size-18;
+                                font-family: $font-family-medium;
+                                color: $color-blue-text;
+                            }
+                        }
+                    }
+                }
+                .bottomBox {
+                    p {
+                        font-size: $font-size-22;
+                        font-family: $font-family-bold;
+                        color: $color-blue-title;
+                        margin-bottom: 1.875rem;
+                    }
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        max-width: 30rem;
+                        li {
+                            font-size: $font-size-18;
+                            font-family: $font-family-medium;
+                            color: $color-blue-title;
+                            padding: 1rem 1.5rem;
+                            border: 0.063rem solid #DBE6FF;
+                            border-radius: 3.125rem;
+                            margin-right: 0.75rem;
+                            margin-bottom: 0.75rem;
                         }
                     }
                 }

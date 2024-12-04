@@ -175,7 +175,7 @@ main img.blur {
 }
 .aboutMe .cardWrap {
   width: 76.5rem;
-  height: 69.438rem;
+  height: 72rem;
   position: relative;
 }
 .aboutMe .cardWrap .card {
@@ -304,4 +304,90 @@ main img.blur {
   width: 1.688rem;
   height: 1.688rem;
   background-position: -19.063rem 0;
+}
+
+/* portfolio 설정 */
+.portfolio {
+  margin-top: 8.438rem;
+  margin-bottom: 20.188rem;
+}
+.portfolio .container {
+  width: 60%;
+  margin: 0 auto;
+}
+.portfolio .container h3 {
+  font-size: 2.625rem;
+  color: #6796fb;
+  font-family: "GmarketSansBold";
+  text-align: center;
+  margin-bottom: 5.375rem;
+}
+.portfolio .container .list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5.063rem;
+}
+.portfolio .container .list li {
+  font-size: 1rem;
+  font-family: "GmarketSansMedium";
+  color: #adadad;
+  cursor: pointer;
+}
+.portfolio .container .list li.on {
+  font-family: "GmarketSansBold";
+  color: #6796fb;
+}
+.portfolio .container .contentsBox {
+  display: flex;
+  justify-content: center;
+}
+.portfolio .container .contentsBox .imgBox {
+  width: 551px;
+  height: 392px;
+  background-color: rgb(255, 206, 206);
+  border-radius: 0.75rem;
+  margin-right: 6.688rem;
+}
+.portfolio .container .contentsBox .txtBox h4 {
+  font-size: 1.875rem;
+  color: #496092;
+  margin-bottom: 2.625rem;
+}
+.portfolio .container .contentsBox .txtBox .detailDepth1 > li {
+  margin-bottom: 1.875rem;
+}
+.portfolio .container .contentsBox .txtBox .detailDepth1 > li .detailDepth2 {
+  display: flex;
+}
+.portfolio .container .contentsBox .txtBox .detailDepth1 > li .detailDepth2 .title {
+  font-size: 1.375rem;
+  font-family: "GmarketSansBold";
+  color: #6796fb;
+  width: 8.563rem;
+}
+.portfolio .container .contentsBox .txtBox .detailDepth1 > li .detailDepth2 .desciprtion {
+  font-size: 1.125rem;
+  font-family: "GmarketSansMedium";
+  color: #496092;
+}
+.portfolio .container .contentsBox .txtBox .bottomBox p {
+  font-size: 1.375rem;
+  font-family: "GmarketSansBold";
+  color: #6796fb;
+  margin-bottom: 1.875rem;
+}
+.portfolio .container .contentsBox .txtBox .bottomBox ul {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 30rem;
+}
+.portfolio .container .contentsBox .txtBox .bottomBox ul li {
+  font-size: 1.125rem;
+  font-family: "GmarketSansMedium";
+  color: #6796fb;
+  padding: 1rem 1.5rem;
+  border: 0.063rem solid #DBE6FF;
+  border-radius: 3.125rem;
+  margin-right: 0.75rem;
+  margin-bottom: 0.75rem;
 }/*# sourceMappingURL=style.css.map */
