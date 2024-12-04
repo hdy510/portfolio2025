@@ -25,6 +25,20 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  height: 100vh; /* 스크롤이 필요한 높이로 설정 */
+  overflow: hidden; /* 기본 스크롤바 숨기기 */
+}
+
+#my-scrollbar {
+  height: 100vh; /* Smooth Scrollbar 적용할 요소의 높이 설정 */
+  overflow: hidden; /* Smooth Scrollbar가 스크롤 관리하므로 숨김 */
+}
+
+.content {
+  height: 300vh; /* 스크롤 테스트를 위한 내용 높이 */
+}
+
 a {
   text-decoration: none;
 }

@@ -1,9 +1,11 @@
 $(document).ready(function () {
-
-
-
-
-
+    // Smooth Scrollbar 설정
+    const Scrollbar = window.Scrollbar;
+    // 초기화
+    const scrollbarInstance = Scrollbar.init(document.querySelector("#my-scrollbar"), {
+        damping: 0.1,
+        renderByPixels: true,
+    });
 
 
 
