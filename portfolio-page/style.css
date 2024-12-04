@@ -63,11 +63,30 @@ header .header-wrap .menu li {
   font-size: 1.125rem;
   cursor: pointer;
   line-height: 1;
-  padding: 1.313rem 2.813rem;
-  color: #7c7c7c;
+  margin: 0 1.375rem;
+  padding: 0.563rem;
 }
-header .header-wrap .menu li.on {
-  color: #0d0d0d;
+header .header-wrap .menu li span {
+  color: #7c7c7c;
+  padding: 0.563rem;
+}
+header .header-wrap .menu li.on span {
+  color: #454545;
+  position: relative;
+}
+header .header-wrap .menu li.on span::after {
+  content: "";
+  display: block;
+  width: 104%;
+  height: 0.188rem;
+  background-color: #1a5ae4;
+  opacity: 0.8;
+  margin-top: 0.625rem;
+  position: absolute;
+  left: -2%;
+}
+header .header-wrap .menu li:hover span {
+  color: #454545;
 }
 
 /* main 설정 */
@@ -138,17 +157,34 @@ main .scrollDown .mouse {
   height: 3.188rem;
   margin-bottom: 0.5rem;
 }
+@keyframes arrow1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 main .scrollDown .arrowBox li {
   background-image: url(src/scrollDownArrow.png);
-  background-size: 1.375rem 0.625rem;
-  width: 1.375rem;
-  height: 0.625rem;
+  background-size: 1.75rem 3rem;
+  width: 1.75rem;
+  height: 1rem;
+}
+main .scrollDown .arrowBox li:nth-child(1) {
+  animation: arrow1 1.2s infinite;
 }
 main .scrollDown .arrowBox li:nth-child(2) {
-  opacity: 0.5;
+  margin-top: -0.375rem;
+  background-position: 0 -1rem;
+  animation: arrow1 1.2s infinite;
+  animation-delay: 0.4s;
 }
 main .scrollDown .arrowBox li:nth-child(3) {
-  opacity: 0.25;
+  margin-top: -6px;
+  background-position: 0 -2rem;
+  animation: arrow1 1.2s infinite;
+  animation-delay: 0.8s;
 }
 main img {
   position: absolute;
@@ -331,10 +367,27 @@ main img.blur {
   font-size: 1rem;
   font-family: "GmarketSansMedium";
   color: #adadad;
+  position: relative;
   cursor: pointer;
+  line-height: 1.5;
+  padding: 0.725rem;
 }
 .portfolio .container .list li.on {
   font-family: "GmarketSansBold";
+  color: #6796fb;
+}
+.portfolio .container .list li.on::after {
+  content: "";
+  display: block;
+  width: 104%;
+  height: 0.188rem;
+  background-color: #6796fb;
+  opacity: 0.8;
+  margin-top: 0.625rem;
+  position: absolute;
+  left: -2%;
+}
+.portfolio .container .list li:hover {
   color: #6796fb;
 }
 .portfolio .container .contentsBox {
@@ -342,11 +395,95 @@ main img.blur {
   justify-content: center;
 }
 .portfolio .container .contentsBox .imgBox {
-  width: 551px;
-  height: 392px;
-  background-color: rgb(255, 206, 206);
+  width: 34.438rem;
+  height: 24.5rem;
   border-radius: 0.75rem;
   margin-right: 6.688rem;
+  overflow: hidden;
+  position: relative;
+}
+.portfolio .container .contentsBox .imgBox img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.portfolio .container .contentsBox .imgBox .blur {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 90, 228, 0.2);
+  backdrop-filter: blur(0.25rem);
+  -webkit-backdrop-filter: blur(0.25rem);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.portfolio .container .contentsBox .imgBox .btnBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  z-index: 3;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.portfolio .container .contentsBox .imgBox .btnBox button {
+  font-size: 1.125rem;
+  background-color: #1a5ae4;
+  color: #fdfdfd;
+  padding: 1rem 1.5rem;
+  border-radius: 3.125rem;
+  border: 0.063rem solid #1a5ae4;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.portfolio .container .contentsBox .imgBox .btnBox button i {
+  color: #fdfdfd;
+  transition: all 0.3s;
+}
+.portfolio .container .contentsBox .imgBox .btnBox button:hover {
+  background-color: #fdfdfd;
+  border: 0.063rem solid #fdfdfd;
+  color: #1a5ae4;
+}
+.portfolio .container .contentsBox .imgBox .btnBox button:hover i {
+  color: #1a5ae4;
+}
+.portfolio .container .contentsBox .imgBox .btnBox a {
+  display: block;
+  font-size: 1.125rem;
+  background-color: #1a5ae4;
+  color: #fdfdfd;
+  padding: 1rem 1.5rem;
+  border-radius: 3.125rem;
+  border: 0.063rem solid #1a5ae4;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.portfolio .container .contentsBox .imgBox .btnBox a i {
+  color: #fdfdfd;
+  transition: all 0.3s;
+}
+.portfolio .container .contentsBox .imgBox .btnBox a:hover {
+  background-color: #fdfdfd;
+  border: 0.063rem solid #fdfdfd;
+  color: #1a5ae4;
+}
+.portfolio .container .contentsBox .imgBox .btnBox a:hover i {
+  color: #1a5ae4;
+}
+.portfolio .container .contentsBox .imgBox:hover .blur {
+  opacity: 1;
+}
+.portfolio .container .contentsBox .imgBox:hover .btnBox {
+  opacity: 1;
 }
 .portfolio .container .contentsBox .txtBox h4 {
   font-size: 1.875rem;
@@ -438,10 +575,13 @@ main img.blur {
   font-size: 1.375rem;
   font-family: "GmarketSansBold";
   margin-bottom: 2.313rem;
+  display: flex;
+  align-items: center;
 }
 .contact .txtBox .mail .link i {
   color: #fdfdfd;
   margin-right: 1.625rem;
+  font-size: 2rem;
 }
 .contact .txtBox .mail .copy {
   color: #fdfdfd;
@@ -449,7 +589,14 @@ main img.blur {
   border: 0.063rem solid #113d9a;
   padding: 0.75rem 0.875rem;
   border-radius: 0.25rem;
+  font-size: 1rem;
   cursor: pointer;
+  transition: all 0.3s;
+}
+.contact .txtBox .mail .copy:hover {
+  background-color: #fdfdfd;
+  border: 0.063rem solid #fdfdfd;
+  color: #113d9a;
 }
 
 /* footer 설정 */

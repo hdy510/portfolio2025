@@ -83,10 +83,33 @@ header {
                 font-size: $font-size-18;
                 cursor: pointer;
                 line-height: 1;
-                padding: 1.313rem 2.813rem;
-                color: $color-gray-text;
+                margin: 0 1.375rem;
+                padding: 0.563rem;
+                span {
+                    color: $color-gray-text;
+                    padding: 0.563rem;
+                }
                 &.on {
-                    color: #0d0d0d;
+                    span {
+                        color: #454545;
+                        position: relative;
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 104%;
+                            height: 0.188rem;
+                            background-color: $color-blue-main;
+                            opacity: 0.8;
+                            margin-top: 0.625rem;
+                            position: absolute;
+                            left: -2%;
+                        }
+                    }
+                }
+                &:hover {
+                    span {
+                        color: #454545;
+                    }
                 }
             }
         }
@@ -159,17 +182,34 @@ main {
             height: 3.188rem;
             margin-bottom: 0.5rem;
         }
+        @keyframes arrow1 {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
         .arrowBox {
             li {
                 background-image: url(src/scrollDownArrow.png);
-                background-size: 1.375rem 0.625rem;
-                width: 1.375rem;
-                height: 0.625rem;
+                background-size: 1.75rem 3rem;
+                width: 1.75rem;
+                height: 1rem;
+                &:nth-child(1) {
+                    animation: arrow1 1.2s infinite;
+                }
                 &:nth-child(2) {
-                    opacity: 0.5;
+                    margin-top: -0.375rem;
+                    background-position: 0 -1rem;
+                    animation: arrow1 1.2s infinite;
+                    animation-delay: 0.4s;
                 }
                 &:nth-child(3) {
-                    opacity: 0.25;
+                    margin-top: -6px;
+                    background-position: 0 -2rem;
+                    animation: arrow1 1.2s infinite;
+                    animation-delay: 0.8s;
                 }
             }
         }
@@ -387,9 +427,26 @@ main {
                 font-size: $font-size-16;
                 font-family: $font-family-medium;
                 color: #adadad;
+                position: relative;
                 cursor: pointer;
+                line-height: 1.5;
+                padding: 0.725rem;
                 &.on {
                     font-family: $font-family-bold;
+                    color: $color-blue-title;
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 104%;
+                        height: 0.188rem;
+                        background-color: $color-blue-title;
+                        opacity: 0.8;
+                        margin-top: 0.625rem;
+                        position: absolute;
+                        left: -2%;
+                    }
+                }
+                &:hover {
                     color: $color-blue-title;
                 }
             }
@@ -398,12 +455,97 @@ main {
             display: flex;
             justify-content: center;
             .imgBox {
-                width: 551px;
-                height: 392px;
-                background-color: rgb(255, 206, 206);
+                width: 34.438rem;
+                height: 24.5rem;
                 border-radius: 0.75rem;
                 margin-right: 6.688rem;
-                img {}
+                overflow: hidden;
+                position: relative;
+                img {
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+                .blur {
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba($color: $color-blue-main, $alpha: 0.2);
+                    backdrop-filter: blur(0.25rem);
+                    -webkit-backdrop-filter: blur(0.25rem);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                    opacity: 0;
+                    transition: all 0.3s;
+                }
+                .btnBox {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: flex;
+                    justify-content: space-between;
+                    width: 70%;
+                    z-index: 3;
+                    opacity: 0;
+                    transition: all 0.3s;
+                    button {
+                        font-size: $font-size-18;
+                        background-color: $color-blue-main;
+                        color: #fdfdfd;
+                        padding: 1rem 1.5rem;
+                        border-radius: 3.125rem;
+                        border: 0.063rem solid $color-blue-main;
+                        cursor: pointer;
+                        transition: all 0.3s;
+                        i {
+                            color: #fdfdfd;
+                            transition: all 0.3s;
+                        }
+                        &:hover {
+                            background-color: #fdfdfd;
+                            border: 0.063rem solid #fdfdfd;
+                            color: $color-blue-main;
+                            i {
+                                color: $color-blue-main;
+                            }
+                        }
+                    }
+                    a {
+                        display: block;
+                        font-size: $font-size-18;
+                        background-color: $color-blue-main;
+                        color: #fdfdfd;
+                        padding: 1rem 1.5rem;
+                        border-radius: 3.125rem;
+                        border: 0.063rem solid $color-blue-main;
+                        cursor: pointer;
+                        transition: all 0.3s;
+                        i {
+                            color: #fdfdfd;
+                            transition: all 0.3s;
+                        }
+                        &:hover {
+                            background-color: #fdfdfd;
+                            border: 0.063rem solid #fdfdfd;
+                            color: $color-blue-main;
+                            i {
+                                color: $color-blue-main;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    .blur {
+                        opacity: 1;
+                    }
+                    .btnBox {
+                        opacity: 1;
+                    }
+                }
             }
             .txtBox {
                 h4 {
@@ -501,9 +643,12 @@ main {
                 font-size: $font-size-22;
                 font-family: $font-family-bold;
                 margin-bottom: 2.313rem;
+                display: flex;
+                align-items: center;
                 i {
                     color: #fdfdfd;
                     margin-right: 1.625rem;
+                    font-size: $font-size-32;
                 }
             }
             .copy {
@@ -512,7 +657,14 @@ main {
                 border: 0.063rem solid #113d9a;
                 padding: 0.75rem 0.875rem;
                 border-radius: 0.25rem;
+                font-size: $font-size-16;
                 cursor: pointer;
+                transition: all 0.3s;
+                &:hover {
+                    background-color: #fdfdfd;
+                    border: 0.063rem solid #fdfdfd;
+                    color: #113d9a;
+                }
             }
         }
     }
