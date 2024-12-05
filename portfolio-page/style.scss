@@ -69,12 +69,12 @@ body {
     overflow: hidden;
 }
 .scrollbar-track {
-    width: 0.75rem;
-    z-index: 101;
+    width: 0.75rem !important; 
+    z-index: 101 !important; 
 }
 .scrollbar-thumb {
-    width: 0.75rem;
-    background-color: $color-blue-main;
+    width: 0.75rem !important; 
+    background-color: $color-blue-main !important; 
 }
 
 /* header 설정 */

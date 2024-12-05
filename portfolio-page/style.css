@@ -53,13 +53,13 @@ body {
 }
 
 .scrollbar-track {
-  width: 0.75rem;
-  z-index: 101;
+  width: 0.75rem !important;
+  z-index: 101 !important;
 }
 
 .scrollbar-thumb {
-  width: 0.75rem;
-  background-color: #1a5ae4;
+  width: 0.75rem !important;
+  background-color: #1a5ae4 !important;
 }
 
 /* header 설정 */
