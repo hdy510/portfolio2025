@@ -46,6 +46,17 @@ body {
     background-color: #fdfdfd;
     overflow-x: hidden;
 }
+a {
+    text-decoration: none;
+}
+ul,ol {
+    list-style: none;
+}
+img {
+    vertical-align: bottom;
+}
+
+/* smooth-scrollbar 설정 */
 body {
     height: 100vh; /* 스크롤이 필요한 높이로 설정 */
     overflow: hidden; /* 기본 스크롤바 숨기기 */
@@ -55,16 +66,15 @@ body {
     overflow: hidden; /* Smooth Scrollbar가 스크롤 관리하므로 숨김 */
 }
 .content {
-    height: 300vh; /* 스크롤 테스트를 위한 내용 높이 */
+    overflow: hidden;
 }
-a {
-    text-decoration: none;
+.scrollbar-track {
+    width: 0.75rem;
+    z-index: 101;
 }
-ul,ol {
-    list-style: none;
-}
-img {
-    vertical-align: bottom;
+.scrollbar-thumb {
+    width: 0.75rem;
+    background-color: $color-blue-main;
 }
 
 /* header 설정 */
@@ -247,7 +257,7 @@ main {
 .aboutMe {
     display: flex;
     justify-content: center;
-    padding-top: 6rem;
+    margin-top: 6rem;
     .cardWrap {
         width: 76.5rem;
         height: 72rem;
@@ -419,9 +429,9 @@ main {
 /* portfolio 설정 */
 .portfolio {
     margin-top: 8.438rem;
-    margin-bottom: 20.188rem;
+    margin-bottom: 16rem;
     .container {
-        width: 60%;
+        width: 64%;
         margin: 0 auto;
         h3 {
             font-size: $font-size-42;
@@ -467,10 +477,10 @@ main {
                 justify-content: center;
                 margin-bottom: 10rem;
                 .imgBox {
-                    width: 34.438rem;
+                    width: 45%;
                     height: 24.5rem;
                     border-radius: 0.75rem;
-                    margin-right: 6.688rem;
+                    margin-right: 5rem;
                     overflow: hidden;
                     position: relative;
                     img {
@@ -499,8 +509,10 @@ main {
                         left: 50%;
                         transform: translate(-50%, -50%);
                         display: flex;
-                        justify-content: space-between;
-                        width: 70%;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 1rem;
+                        width: 100%;
                         z-index: 3;
                         opacity: 0;
                         transition: all 0.3s;
@@ -560,6 +572,7 @@ main {
                     }
                 }
                 .txtBox {
+                    width: 55%;
                     h4 {
                         font-size: $font-size-30;
                         color: $color-blue-text;
@@ -594,7 +607,7 @@ main {
                         ul {
                             display: flex;
                             flex-wrap: wrap;
-                            max-width: 30rem;
+                            max-width: 50rem;
                             margin-left: 0.875rem;
                             li {
                                 font-size: $font-size-18;

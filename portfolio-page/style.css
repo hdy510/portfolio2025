@@ -25,6 +25,19 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+/* smooth-scrollbar 설정 */
 body {
   height: 100vh; /* 스크롤이 필요한 높이로 설정 */
   overflow: hidden; /* 기본 스크롤바 숨기기 */
@@ -36,19 +49,17 @@ body {
 }
 
 .content {
-  height: 300vh; /* 스크롤 테스트를 위한 내용 높이 */
+  overflow: hidden;
 }
 
-a {
-  text-decoration: none;
+.scrollbar-track {
+  width: 0.75rem;
+  z-index: 101;
 }
 
-ul, ol {
-  list-style: none;
-}
-
-img {
-  vertical-align: bottom;
+.scrollbar-thumb {
+  width: 0.75rem;
+  background-color: #1a5ae4;
 }
 
 /* header 설정 */
@@ -221,7 +232,7 @@ main img.blur {
 .aboutMe {
   display: flex;
   justify-content: center;
-  padding-top: 6rem;
+  margin-top: 6rem;
 }
 .aboutMe .cardWrap {
   width: 76.5rem;
@@ -359,10 +370,10 @@ main img.blur {
 /* portfolio 설정 */
 .portfolio {
   margin-top: 8.438rem;
-  margin-bottom: 20.188rem;
+  margin-bottom: 16rem;
 }
 .portfolio .container {
-  width: 60%;
+  width: 64%;
   margin: 0 auto;
 }
 .portfolio .container h3 {
@@ -409,10 +420,10 @@ main img.blur {
   margin-bottom: 10rem;
 }
 .portfolio .container .contentsBoxWrap .contentsBox .imgBox {
-  width: 34.438rem;
+  width: 45%;
   height: 24.5rem;
   border-radius: 0.75rem;
-  margin-right: 6.688rem;
+  margin-right: 5rem;
   overflow: hidden;
   position: relative;
 }
@@ -442,8 +453,10 @@ main img.blur {
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  justify-content: space-between;
-  width: 70%;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
   z-index: 3;
   opacity: 0;
   transition: all 0.3s;
@@ -499,6 +512,9 @@ main img.blur {
 .portfolio .container .contentsBoxWrap .contentsBox .imgBox:hover .btnBox {
   opacity: 1;
 }
+.portfolio .container .contentsBoxWrap .contentsBox .txtBox {
+  width: 55%;
+}
 .portfolio .container .contentsBoxWrap .contentsBox .txtBox h4 {
   font-size: 1.875rem;
   color: #496092;
@@ -530,7 +546,7 @@ main img.blur {
 .portfolio .container .contentsBoxWrap .contentsBox .txtBox .bottomBox ul {
   display: flex;
   flex-wrap: wrap;
-  max-width: 30rem;
+  max-width: 50rem;
   margin-left: 0.875rem;
 }
 .portfolio .container .contentsBoxWrap .contentsBox .txtBox .bottomBox ul li {
