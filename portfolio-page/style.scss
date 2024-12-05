@@ -109,21 +109,26 @@ header {
                 span {
                     color: $color-gray-text;
                     padding: 0.563rem;
+                    position: relative;
+                    transition: color 0.3s; // 색상 전환
+                    &::after {
+                        content: "";
+                        width: 0; // 초기 넓이는 0
+                        height: 0.188rem;
+                        background-color: $color-blue-main;
+                        opacity: 0.8;
+                        position: absolute;
+                        bottom: -0.625rem;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        transition: width 0.3s ease; // 넓이 전환
+                    }
                 }
                 &.on {
                     span {
                         color: #454545;
-                        position: relative;
                         &::after {
-                            content: "";
-                            display: block;
-                            width: 104%;
-                            height: 0.188rem;
-                            background-color: $color-blue-main;
-                            opacity: 0.8;
-                            margin-top: 0.625rem;
-                            position: absolute;
-                            left: -2%;
+                            width: 100%; // 넓이를 100%로 변경
                         }
                     }
                 }
@@ -442,7 +447,8 @@ main {
         }
         .list {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 2rem;
             margin-bottom: 5.063rem;
             li {
                 font-size: $font-size-16;
@@ -452,18 +458,23 @@ main {
                 cursor: pointer;
                 line-height: 1.5;
                 padding: 0.725rem;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 0.188rem;
+                    background-color: $color-blue-title;
+                    opacity: 0.8;
+                    margin-top: 0.625rem;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    transition: width 0.3s ease;
+                }
                 &.on {
                     color: $color-blue-title;
                     &::after {
-                        content: "";
-                        display: block;
-                        width: 104%;
-                        height: 0.188rem;
-                        background-color: $color-blue-title;
-                        opacity: 0.8;
-                        margin-top: 0.625rem;
-                        position: absolute;
-                        left: -2%;
+                        width: 100%;
                     }
                 }
                 &:hover {
@@ -622,8 +633,14 @@ main {
                         }
                     }
                 }
+                &.work2025 {
+                    font-size: $font-size-30;
+                    padding: 10rem;
+                    color: $color-gray-text;
+                    display: none;
+                }
             }
-        }
+        }   
     }
 }
 

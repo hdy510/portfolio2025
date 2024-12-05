@@ -91,6 +91,17 @@ $(document).ready(function () {
     $('.portfolio .list li').click(function () {
         // 1. list 모양 변경
         $(this).addClass('on').siblings().removeClass('on');
+
+        // 2. 컨텐츠 변경
+        if ($(this).index() == 0) {
+            // 2024 작업물 보여주기
+            $('.work2024').show();
+            $('.work2025').hide();
+        } else if ($(this).index() == 1) {
+            // 2025 작업물 보여주기
+            $('.work2025').show().css({'display': 'flex'});
+            $('.work2024').hide();
+        }
         
     });
 
