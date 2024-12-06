@@ -378,7 +378,7 @@ main img.blur {
   margin-bottom: 16rem;
 }
 .portfolio .container {
-  width: 64%;
+  width: 65%;
   margin: 0 auto;
 }
 .portfolio .container h3 {
@@ -430,101 +430,76 @@ main img.blur {
   justify-content: center;
   margin-bottom: 10rem;
 }
-.portfolio .container .contentsBoxWrap .contentsBox .imgBox {
-  width: 45%;
-  height: 24.5rem;
-  border-radius: 0.75rem;
+.portfolio .container .contentsBoxWrap .contentsBox .leftBox {
+  width: 40%;
   margin-right: 5rem;
+  padding-top: 0.5rem;
   overflow: hidden;
-  position: relative;
 }
-.portfolio .container .contentsBoxWrap .contentsBox .imgBox img {
+.portfolio .container .contentsBoxWrap .contentsBox .leftBox video {
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  border-radius: 0.625rem;
 }
-.portfolio .container .contentsBoxWrap .contentsBox .imgBox .blur {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(26, 90, 228, 0.2);
-  backdrop-filter: blur(0.25rem);
-  -webkit-backdrop-filter: blur(0.25rem);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  opacity: 0;
-  transition: all 0.3s;
-}
-.portfolio .container .contentsBoxWrap .contentsBox .imgBox .btnBox {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.portfolio .container .contentsBoxWrap .contentsBox .leftBox .btnBox {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   width: 100%;
-  z-index: 3;
-  opacity: 0;
+  margin-top: 1.875rem;
   transition: all 0.3s;
 }
-.portfolio .container .contentsBoxWrap .contentsBox .imgBox .btnBox button {
-  font-size: 1.125rem;
+.portfolio .container .contentsBoxWrap .contentsBox .leftBox .btnBox button {
+  font-size: 1rem;
   background-color: #1a5ae4;
   color: #fdfdfd;
-  padding: 1rem 1.5rem;
+  padding: 0.875rem 1.5rem;
   border-radius: 3.125rem;
   border: 0.063rem solid #1a5ae4;
   cursor: pointer;
   transition: all 0.3s;
 }
-.portfolio .container .contentsBoxWrap .contentsBox .imgBox .btnBox button i {
+.portfolio .container .contentsBoxWrap .contentsBox .leftBox .btnBox button i {
   color: #fdfdfd;
   transition: all 0.3s;
 }
-.portfolio .container .contentsBoxWrap .contentsBox .imgBox .btnBox button:hover {
+.portfolio .container .contentsBoxWrap .contentsBox .leftBox .btnBox button:hover {
   background-color: #fdfdfd;
-  border: 0.063rem solid #fdfdfd;
   color: #1a5ae4;
 }
-.portfolio .container .contentsBoxWrap .contentsBox .imgBox .btnBox button:hover i {
+.portfolio .container .contentsBoxWrap .contentsBox .leftBox .btnBox button:hover i {
   color: #1a5ae4;
 }
-.portfolio .container .contentsBoxWrap .contentsBox .imgBox .btnBox a {
+.portfolio .container .contentsBoxWrap .contentsBox .leftBox .btnBox a {
   display: block;
-  font-size: 1.125rem;
+  font-size: 1rem;
   background-color: #1a5ae4;
   color: #fdfdfd;
-  padding: 1rem 1.5rem;
+  padding: 0.875rem 1.5rem;
   border-radius: 3.125rem;
   border: 0.063rem solid #1a5ae4;
   cursor: pointer;
   transition: all 0.3s;
 }
-.portfolio .container .contentsBoxWrap .contentsBox .imgBox .btnBox a i {
+.portfolio .container .contentsBoxWrap .contentsBox .leftBox .btnBox a i {
   color: #fdfdfd;
   transition: all 0.3s;
 }
-.portfolio .container .contentsBoxWrap .contentsBox .imgBox .btnBox a:hover {
+.portfolio .container .contentsBoxWrap .contentsBox .leftBox .btnBox a:hover {
   background-color: #fdfdfd;
-  border: 0.063rem solid #fdfdfd;
   color: #1a5ae4;
 }
-.portfolio .container .contentsBoxWrap .contentsBox .imgBox .btnBox a:hover i {
+.portfolio .container .contentsBoxWrap .contentsBox .leftBox .btnBox a:hover i {
   color: #1a5ae4;
 }
-.portfolio .container .contentsBoxWrap .contentsBox .imgBox:hover .blur {
+.portfolio .container .contentsBoxWrap .contentsBox .leftBox:hover .blur {
   opacity: 1;
 }
-.portfolio .container .contentsBoxWrap .contentsBox .imgBox:hover .btnBox {
+.portfolio .container .contentsBoxWrap .contentsBox .leftBox:hover .btnBox {
   opacity: 1;
 }
 .portfolio .container .contentsBoxWrap .contentsBox .txtBox {
-  width: 55%;
+  width: 60%;
 }
 .portfolio .container .contentsBoxWrap .contentsBox .txtBox h4 {
   font-size: 1.875rem;
@@ -561,14 +536,14 @@ main img.blur {
   margin-left: 0.875rem;
 }
 .portfolio .container .contentsBoxWrap .contentsBox .txtBox .bottomBox ul li {
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   font-family: "GmarketSansMedium";
   color: #6796fb;
-  padding: 1rem 1.5rem;
+  padding: 0.625rem 1rem;
   border: 0.063rem solid #DBE6FF;
   border-radius: 3.125rem;
-  margin-right: 0.75rem;
-  margin-bottom: 0.75rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.625rem;
 }
 .portfolio .container .contentsBoxWrap .contentsBox.work2025 {
   font-size: 1.875rem;

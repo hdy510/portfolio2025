@@ -436,7 +436,7 @@ main {
     margin-top: 8.438rem;
     margin-bottom: 16rem;
     .container {
-        width: 64%;
+        width: 65%;
         margin: 0 auto;
         h3 {
             font-size: $font-size-42;
@@ -487,51 +487,36 @@ main {
                 display: flex;
                 justify-content: center;
                 margin-bottom: 10rem;
-                .imgBox {
-                    width: 45%;
-                    height: 24.5rem;
-                    border-radius: 0.75rem;
+                .leftBox {
+                    width: 40%;
                     margin-right: 5rem;
+                    padding-top: 0.5rem;
                     overflow: hidden;
-                    position: relative;
-                    img {
+                    // img {
+                    //     width: 100%;
+                    //     position: absolute;
+                    //     top: 0;
+                    //     left: 0;
+                    //     z-index: 1;
+                    // }
+                    video {
                         width: 100%;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        z-index: 1;
-                    }
-                    .blur {
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgba($color: $color-blue-main, $alpha: 0.2);
-                        backdrop-filter: blur(0.25rem);
-                        -webkit-backdrop-filter: blur(0.25rem);
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        z-index: 2;
-                        opacity: 0;
-                        transition: all 0.3s;
+                        border-radius: 0.625rem;
+                        source {}
                     }
                     .btnBox {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         gap: 1rem;
                         width: 100%;
-                        z-index: 3;
-                        opacity: 0;
+                        margin-top: 1.875rem;
                         transition: all 0.3s;
                         button {
-                            font-size: $font-size-18;
+                            font-size: $font-size-16;
                             background-color: $color-blue-main;
                             color: #fdfdfd;
-                            padding: 1rem 1.5rem;
+                            padding: 0.875rem 1.5rem;
                             border-radius: 3.125rem;
                             border: 0.063rem solid $color-blue-main;
                             cursor: pointer;
@@ -542,7 +527,6 @@ main {
                             }
                             &:hover {
                                 background-color: #fdfdfd;
-                                border: 0.063rem solid #fdfdfd;
                                 color: $color-blue-main;
                                 i {
                                     color: $color-blue-main;
@@ -551,10 +535,10 @@ main {
                         }
                         a {
                             display: block;
-                            font-size: $font-size-18;
+                            font-size: $font-size-16;
                             background-color: $color-blue-main;
                             color: #fdfdfd;
-                            padding: 1rem 1.5rem;
+                            padding: 0.875rem 1.5rem;
                             border-radius: 3.125rem;
                             border: 0.063rem solid $color-blue-main;
                             cursor: pointer;
@@ -565,7 +549,6 @@ main {
                             }
                             &:hover {
                                 background-color: #fdfdfd;
-                                border: 0.063rem solid #fdfdfd;
                                 color: $color-blue-main;
                                 i {
                                     color: $color-blue-main;
@@ -583,7 +566,7 @@ main {
                     }
                 }
                 .txtBox {
-                    width: 55%;
+                    width: 60%;
                     h4 {
                         font-size: $font-size-30;
                         color: $color-blue-text;
@@ -621,14 +604,14 @@ main {
                             max-width: 50rem;
                             margin-left: 0.875rem;
                             li {
-                                font-size: $font-size-18;
+                                font-size: $font-size-14;
                                 font-family: $font-family-medium;
                                 color: $color-blue-title;
-                                padding: 1rem 1.5rem;
+                                padding: 0.625rem 1rem;
                                 border: 0.063rem solid #DBE6FF;
                                 border-radius: 3.125rem;
-                                margin-right: 0.75rem;
-                                margin-bottom: 0.75rem;
+                                margin-right: 0.5rem;
+                                margin-bottom: 0.625rem;
                             }
                         }
                     }
