@@ -107,6 +107,37 @@ $(document).ready(function () {
 
 
 
+    // concept design 이미지 등장 설정
+    function handlePortfolioClick() {
+        $('.portfolio .btnBox button').click(function () {
+            // 현재 클릭된 li 요소
+            let $currentItem = $(this).parent().parent().parent();
+            
+            // work2024 클래스를 가진 li에서 고유한 브랜드/프로젝트 클래스 추출
+            let projectNameClass = $currentItem.attr('class').split(' ').find(cls => 
+                cls !== 'contentsBox' && cls !== 'work2024'
+            );
+    
+            // 해당 브랜드/프로젝트 클래스를 가진 이미지에 'on' 클래스 추가
+            $('.conceptDesign .imgBox img').removeClass('on');
+            $('.conceptDesign .imgBox img').each(function() {
+                if ($(this).hasClass(projectNameClass)) {
+                    $(this).addClass('on');
+                }
+            });
+    
+            $('.conceptDesign').show().css({'display': 'flex'});
+        });
+    }
+    handlePortfolioClick();
+
+    // concept design 이미지 퇴장 설정
+    $('.conceptDesign button').click(function () {
+        $('.conceptDesign').hide();
+        $('.conceptDesign .imgBox img').removeClass('on');
+    });
+
+
 
 
     // 메일 주소 복사 기능

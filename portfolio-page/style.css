@@ -224,7 +224,7 @@ main img {
   position: absolute;
 }
 main img.main {
-  width: 38rem;
+  width: 40rem;
   right: -4rem;
   bottom: -24rem;
 }
@@ -702,6 +702,68 @@ footer {
 footer p {
   color: #fdfdfd;
   text-align: center;
+}
+
+/* concept design 설정 */
+.conceptDesign {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 8rem;
+  background-color: rgba(46, 58, 83, 0.2);
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
+  display: none;
+}
+.conceptDesign .imgBox {
+  width: 80%;
+  height: 90%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-color: #1a5ae4 #f4f4f4;
+  scrollbar-width: thin;
+}
+.conceptDesign .imgBox::-webkit-scrollbar {
+  width: 1rem;
+}
+.conceptDesign .imgBox::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+.conceptDesign .imgBox::-webkit-scrollbar-thumb {
+  background: #1a5ae4;
+  border-radius: 0.5rem;
+  border: 2px solid #f4f4f4;
+}
+.conceptDesign .imgBox::-webkit-scrollbar-thumb:hover {
+  background: #0039b3;
+}
+.conceptDesign .imgBox img {
+  width: 100%;
+  display: none;
+}
+.conceptDesign .imgBox img.on {
+  display: block;
+}
+.conceptDesign button {
+  width: 2.625rem;
+  height: 2.625rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.conceptDesign button i {
+  display: block;
+  font-size: 2.625rem;
+  color: #1a5ae4;
+  transition: all 0.3s;
+}
+.conceptDesign button:hover i {
+  color: #0039b3;
 }
 
 /* 미디어쿼리 설정 */
