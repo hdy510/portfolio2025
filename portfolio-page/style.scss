@@ -266,21 +266,14 @@ main {
     margin-top: 6rem;
     .cardWrap {
         width: 76.5rem;
-        height: 72rem;
-        position: relative;
+        // height: 72rem;
         margin: 0 1.375rem;
-        .card {
-            background-color: rgba(26, 90, 228, 0.07);
-            border-radius: 2rem;
-            border: 0.125rem solid rgba(238, 243, 255, 0.07);
-            backdrop-filter: blur($font-size-12);
-            -webkit-backdrop-filter: blur($font-size-12);
-            height: 100%;
-            position: relative;
-        }
+        background-color: rgba(26, 90, 228, 0.07);
+        border-radius: 2rem;
+        border: 0.125rem solid rgba(238, 243, 255, 0.07);
+        backdrop-filter: blur($font-size-12);
+        -webkit-backdrop-filter: blur($font-size-12);
         .txtBox {
-            position: absolute;
-            top: 0;
             width: 100%;
             height: 100%;
             padding: 7.125rem 9.188rem;
@@ -292,11 +285,16 @@ main {
                 margin-bottom: 4.375rem;
             }
             > p {
-                color: $color-blue-text;
                 font-size: $font-size-22;
+                color: $color-blue-text;
                 text-align: center;
                 line-height: 2;
                 margin-bottom: 5.5rem;
+                i {
+                    white-space: nowrap;
+                    font-style: normal;
+                    color: $color-blue-text;
+                }
             }
             .bottomBox {
                 .box1 {
@@ -316,6 +314,7 @@ main {
                                         color: $color-blue-text;
                                         line-height: 2.2;
                                         margin-top: -0.313rem;
+                                        
                                     }
                                 }
                             }
@@ -347,6 +346,10 @@ main {
                                     margin-bottom: 0.75rem;
                                     display: flex;
                                     align-items: center;
+                                    span {
+                                        color: $color-blue-title;
+                                        font-size: $font-size-18;
+                                    }
                                     &.icon {
                                         i {
                                             background-image: url(src/skillsIcons.png);
@@ -422,6 +425,21 @@ main {
                                                 background-position: -19.063rem 0;
                                             }
                                         }
+                                    }
+                                }
+                            }
+                            .mobileSkillsInfo {
+                                margin-top: 1rem;
+                                display: none;
+                                li {
+                                    font-size: $font-size-12;
+                                    color: $color-blue-text;
+                                    line-height: 2.2;
+                                    display: flex;
+                                    &::before {
+                                        content: "•";
+                                        color: $color-blue-text;
+                                        margin-right: 0.5rem;
                                     }
                                 }
                             }
@@ -735,6 +753,7 @@ footer {
     align-items: center;
     p {
         color: #fdfdfd;
+        text-align: center;
     }
 }
 
@@ -776,7 +795,7 @@ footer {
                     width: 1.5rem;
                     height: 1.5rem;
                     top: -0.6rem;
-                    left: 7.6rem;
+                    left: 6.4rem;
                 }
             }
             h1 {
@@ -785,7 +804,7 @@ footer {
                 b {}
             }
             h2 {
-                font-size: 1.625rem;
+                font-size: $font-size-30;
                 text-align: center;
             }
             .desciprtion {
@@ -822,9 +841,9 @@ footer {
     }
     /* about me 설정 */
     .aboutMe {
+        margin-top: 1rem;
         .cardWrap {
-            height: 80rem;
-            .card {}
+            // height: 80rem;
             .txtBox {
                 padding: 4.375rem 1.25rem;
                 h3 {
@@ -838,6 +857,8 @@ footer {
                 .bottomBox {
                     .box1 {
                         .listDepth1 {
+                            display: flex;
+                            flex-wrap: wrap;
                             > li {
                                 .listDepth2 {
                                     flex-direction: column;
@@ -852,30 +873,48 @@ footer {
                                         }
                                     }
                                 }
+                                &.name {
+                                    width: 50%;
+                                }
+                                &.birth {
+                                    width: 50%;
+                                }
                             }
                         }
                     }
                     .box2 {
                         .listDepth1 {
                             > li {
+                                &.skills {
+                                    margin-bottom: 0;
+                                }
                                 p {
-                                    font-size: $font-size-18;
+                                    font-size: $font-size-16;
                                     margin-bottom: 0.875rem;
                                 }
                                 .listDepth2 {
                                     margin-left: 0.75rem;
                                     li {
                                         font-size: $font-size-12;
-                                        padding: 0.5rem 1.25rem;
+                                        padding: 0.5rem 1rem;
                                         margin-right: 0.375rem;
+                                        span {
+                                            display: none;
+                                        }
                                         &.icon {
+                                            background-color: transparent;
+                                            border: none;
+                                            margin-right: 0;
+                                            margin-bottom: 0;
                                             i {
                                                 transform: scale(0.8);
-                                                margin-right: 0.375rem;
-                                                display: none;
+                                                margin-right: 0;
                                             }
                                         }
                                     }
+                                }
+                                .mobileSkillsInfo {
+                                    display: block;
                                 }
                             }
                         }
@@ -886,12 +925,15 @@ footer {
     }
     /* portfolio 설정 */
     .portfolio {
-        margin-bottom: 10rem;
+        margin-bottom: 6rem;
         .container {
             width: auto;
             margin: 0 1.375rem;
             h3 {
                 font-size: $font-size-24;
+                margin-bottom: 2.5rem;
+            }
+            .list {
                 margin-bottom: 2.5rem;
             }
             .contentsBoxWrap {
@@ -906,11 +948,11 @@ footer {
                         .btnBox {
                             gap: 0.625rem;
                             button {
-                                font-size: $font-size-14;
+                                font-size: $font-size-12;
                                 padding: 0.75rem 1.125rem;
                             }
                             a {
-                                font-size: $font-size-14;
+                                font-size: $font-size-12;
                                 padding: 0.75rem 1.125rem;
                             }
                         }
@@ -919,6 +961,7 @@ footer {
                         width: 100%;
                         h4 {
                             font-size: $font-size-22;
+                            margin-bottom: 2rem;
                         }
                         .detailDepth1 {
                             > li {
@@ -927,10 +970,11 @@ footer {
                                     .title {
                                         font-size: $font-size-14;
                                         width: 5rem;
+                                        line-height: 1.5;
                                     }
                                     .desciprtion {
                                         font-size: $font-size-14;
-                                        line-height: 1;
+                                        line-height: 1.5;
                                     }
                                 }
                             }
@@ -938,15 +982,20 @@ footer {
                         .bottomBox {
                             p {
                                 font-size: $font-size-14;
+                                margin-bottom: 1.125rem;
                             }
                             ul {
                                 li {
                                     font-size: $font-size-12;
-                                    padding: 0.5rem 1.25rem;
+                                    padding: 0.5rem 1rem;
                                     margin-right: 0.375rem;
                                 }
                             }
                         }
+                    }
+                    &.work2025 {
+                        font-size: $font-size-16;
+                        padding: 1rem;
                     }
                 }
             }
@@ -965,8 +1014,13 @@ footer {
                 margin-bottom: 2.5rem;
             }
             p {
-                font-size: $font-size-14;
+                font-size: $font-size-16;
                 margin-bottom: 5rem;
+                i {
+                    white-space: nowrap;
+                    font-style: normal;
+                    color: #fdfdfd;
+                }
             }
             .mail {
                 .link {
