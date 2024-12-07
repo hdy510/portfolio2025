@@ -78,6 +78,9 @@ header .header-wrap {
   max-width: 1620px;
   margin: 0 auto;
 }
+header .header-wrap .logo {
+  margin-left: 1.375rem;
+}
 header .header-wrap .logo a img {
   width: 7.063rem;
 }
@@ -243,6 +246,7 @@ main img.blur {
   width: 76.5rem;
   height: 72rem;
   position: relative;
+  margin: 0 1.375rem;
 }
 .aboutMe .cardWrap .card {
   background-color: rgba(26, 90, 228, 0.07);
@@ -471,7 +475,9 @@ main img.blur {
   color: #1a5ae4;
 }
 .portfolio .container .contentsBoxWrap .contentsBox .leftBox .btnBox a {
-  display: block;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
   font-size: 1rem;
   background-color: #1a5ae4;
   color: #fdfdfd;
@@ -657,4 +663,209 @@ footer {
 }
 footer p {
   color: #fdfdfd;
+}
+
+/* 미디어쿼리 설정 */
+/* 데스크탑 구간 */
+/* 태블릿 구간 */
+/* 모바일 구간 */
+@media (max-width: 440px) {
+  /* smooth-scrollbar 설정 */
+  .scrollbar-track {
+    width: 0.375rem !important;
+  }
+  .scrollbar-thumb {
+    width: 0.375rem !important;
+  }
+  /* header 설정 */
+  header .header-wrap .menu {
+    display: none;
+  }
+  /* main 설정 */
+  main .txtBox {
+    margin-left: 0;
+  }
+  main .txtBox .year {
+    font-size: 1.125rem;
+    margin-bottom: 0.625rem;
+    text-align: center;
+  }
+  main .txtBox .year span {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: -0.6rem;
+    left: 7.6rem;
+  }
+  main .txtBox h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  main .txtBox h2 {
+    font-size: 1.625rem;
+    text-align: center;
+  }
+  main .txtBox .desciprtion {
+    font-size: 0.875rem;
+    text-align: center;
+  }
+  main .scrollDown span {
+    font-size: 0.75rem;
+  }
+  main .scrollDown .mouse {
+    transform: scale(0.8);
+    margin-bottom: 0.25rem;
+  }
+  main .scrollDown .arrowBox li {
+    transform: scale(0.8);
+  }
+  main img.main {
+    width: 12rem;
+    right: -5.2rem;
+    bottom: -4rem;
+  }
+  main img.blur {
+    width: 6rem;
+    left: 2rem;
+    filter: blur(0.5rem);
+  }
+  /* about me 설정 */
+  .aboutMe .cardWrap {
+    height: 80rem;
+  }
+  .aboutMe .cardWrap .txtBox {
+    padding: 4.375rem 1.25rem;
+  }
+  .aboutMe .cardWrap .txtBox h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .aboutMe .cardWrap .txtBox > p {
+    font-size: 0.875rem;
+    margin-bottom: 2.5rem;
+  }
+  .aboutMe .cardWrap .txtBox .bottomBox .box1 .listDepth1 > li .listDepth2 {
+    flex-direction: column;
+  }
+  .aboutMe .cardWrap .txtBox .bottomBox .box1 .listDepth1 > li .listDepth2 li.title {
+    font-size: 1rem;
+  }
+  .aboutMe .cardWrap .txtBox .bottomBox .box1 .listDepth1 > li .listDepth2 li.desciprtion {
+    font-size: 0.875rem;
+    margin-top: 0.625rem;
+    margin-left: 0.75rem;
+  }
+  .aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li p {
+    font-size: 1.125rem;
+    margin-bottom: 0.875rem;
+  }
+  .aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li .listDepth2 {
+    margin-left: 0.75rem;
+  }
+  .aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li .listDepth2 li {
+    font-size: 0.75rem;
+    padding: 0.5rem 1.25rem;
+    margin-right: 0.375rem;
+  }
+  .aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li .listDepth2 li.icon i {
+    transform: scale(0.8);
+    margin-right: 0.375rem;
+    display: none;
+  }
+  /* portfolio 설정 */
+  .portfolio {
+    margin-bottom: 10rem;
+  }
+  .portfolio .container {
+    width: auto;
+    margin: 0 1.375rem;
+  }
+  .portfolio .container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .portfolio .container .contentsBoxWrap .contentsBox {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+  .portfolio .container .contentsBoxWrap .contentsBox .leftBox {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .portfolio .container .contentsBoxWrap .contentsBox .leftBox .btnBox {
+    gap: 0.625rem;
+  }
+  .portfolio .container .contentsBoxWrap .contentsBox .leftBox .btnBox button {
+    font-size: 0.875rem;
+    padding: 0.75rem 1.125rem;
+  }
+  .portfolio .container .contentsBoxWrap .contentsBox .leftBox .btnBox a {
+    font-size: 0.875rem;
+    padding: 0.75rem 1.125rem;
+  }
+  .portfolio .container .contentsBoxWrap .contentsBox .txtBox {
+    width: 100%;
+  }
+  .portfolio .container .contentsBoxWrap .contentsBox .txtBox h4 {
+    font-size: 1.375rem;
+  }
+  .portfolio .container .contentsBoxWrap .contentsBox .txtBox .detailDepth1 > li {
+    margin-bottom: 1.125rem;
+  }
+  .portfolio .container .contentsBoxWrap .contentsBox .txtBox .detailDepth1 > li .detailDepth2 .title {
+    font-size: 0.875rem;
+    width: 5rem;
+  }
+  .portfolio .container .contentsBoxWrap .contentsBox .txtBox .detailDepth1 > li .detailDepth2 .desciprtion {
+    font-size: 0.875rem;
+    line-height: 1;
+  }
+  .portfolio .container .contentsBoxWrap .contentsBox .txtBox .bottomBox p {
+    font-size: 0.875rem;
+  }
+  .portfolio .container .contentsBoxWrap .contentsBox .txtBox .bottomBox ul li {
+    font-size: 0.75rem;
+    padding: 0.5rem 1.25rem;
+    margin-right: 0.375rem;
+  }
+  /* contact 설정 */
+  .contact {
+    height: 37.5rem;
+  }
+  .contact .ellipse {
+    width: 70rem;
+    height: 40rem;
+  }
+  .contact .txtBox h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .contact .txtBox p {
+    font-size: 0.875rem;
+    margin-bottom: 5rem;
+  }
+  .contact .txtBox .mail .link i {
+    font-size: 1.375rem;
+  }
+  .contact .txtBox .mail .link b {
+    font-size: 1rem;
+  }
+  .contact .txtBox .mail .copy {
+    font-size: 0.875rem;
+  }
+  .contact .txtBox .copy-message {
+    font-size: 0.875rem;
+    padding: 1rem;
+  }
+  .contact .txtBox .copy-message i {
+    transform: scale(0.8);
+  }
+  /* footer 설정 */
+  footer {
+    height: 6.875rem;
+  }
+  footer p {
+    font-size: 0.75rem;
+  }
 }/*# sourceMappingURL=style.css.map */
