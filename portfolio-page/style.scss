@@ -912,6 +912,14 @@ footer {
             }
         }
     }
+    /* contact 설정 */
+    .contact {
+        .txtBox {
+            p {
+                margin-bottom: 6.25rem;
+            }
+        }
+    }
 }
 /* 태블릿 구간 */
 @media (max-width:768px) { 
@@ -924,9 +932,17 @@ footer {
     }
     /* header 설정 */
     header {
+        height: 7.6rem;
         .header-wrap {
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.8rem;
             .menu {
-                display: none;
+                margin-right: 0;
+                li {
+                    font-size: $font-size-14;
+                    padding: 0.25rem;
+                }
             }
         }
     }
@@ -1090,6 +1106,7 @@ footer {
             h3 {
                 font-size: $font-size-30;
                 margin-bottom: 2.5rem;
+                padding-top: 4rem;
             }
             .list {
                 margin-bottom: 2.5rem;
@@ -1213,6 +1230,17 @@ footer {
         .header-wrap {
             .logo {
                 margin-left: 1.375rem;
+            }
+            .menu {
+                li {
+                    font-size: $font-size-12;
+                    span {
+                        padding: 0;
+                        &::after {
+                            height: 0.125rem;
+                        }
+                    }
+                }
             }
         }
     }
