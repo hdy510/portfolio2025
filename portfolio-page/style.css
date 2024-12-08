@@ -62,6 +62,60 @@ body {
   background-color: #1a5ae4 !important;
 }
 
+/* 텍스트 등장 애니메이션 설정 */
+.textAppear1 {
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: transform 1s, opacity 1s;
+  transition-delay: 0;
+}
+.textAppear1.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.textAppear2 {
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: transform 1s, opacity 1s;
+  transition-delay: 0.2s;
+}
+.textAppear2.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.textAppear3 {
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: transform 1s, opacity 1s;
+  transition-delay: 0.4s;
+}
+.textAppear3.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.textAppear4 {
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: transform 1s, opacity 1s;
+  transition-delay: 0.6s;
+}
+.textAppear4.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.textAppear5 {
+  opacity: 0;
+  transition: opacity 1s;
+  transition-delay: 0.8s;
+}
+.textAppear5.on {
+  opacity: 1;
+}
+
 /* header 설정 */
 header {
   width: 100%;
@@ -222,20 +276,32 @@ main .scrollDown .arrowBox li:nth-child(3) {
 }
 main img {
   position: absolute;
+  opacity: 0;
 }
 main img.main {
   width: 40rem;
   right: -4rem;
   bottom: -24rem;
+  transform: translateY(5rem);
+  transition: transform 2s, opacity 2s;
+}
+main img.main.on {
+  opacity: 1;
+  transform: translateY(0);
 }
 main img.blur {
   width: 16rem;
   top: 6rem;
   right: 4rem;
-  transform: scaleX(-1);
+  transform: scaleX(-1) translateY(-3rem);
   z-index: -1;
   filter: blur(0.75rem);
   opacity: 0.8;
+  transition: transform 1.5s, opacity 1.5s;
+}
+main img.blur.on {
+  opacity: 1;
+  transform: scaleX(-1) translateY(0);
 }
 
 /* about me 설정 */

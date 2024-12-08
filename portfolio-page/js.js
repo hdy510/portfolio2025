@@ -6,14 +6,9 @@ $(document).ready(function () {
         damping: 0.1,
         renderByPixels: true,
     });
-    // 스크롤 이벤트 리스너 추가
-    scrollbarInstance.addListener(updateActiveMenu);
-
-
-
-
-
     
+
+
 
     // 메뉴 클릭 여부를 추적하는 플래그
     let isMenuClicked = false;
@@ -44,6 +39,25 @@ $(document).ready(function () {
             }
         });
     }
+    // 스크롤 이벤트 리스너 추가
+    scrollbarInstance.addListener(updateActiveMenu);
+
+
+    
+
+    // 메인페이지 등장 효과 설정
+    // 파우치 등장
+    $('main > img').addClass('on');
+    // year 등장
+    $('main .year').addClass('on');
+    // h1 등장
+    $('main h1').addClass('on');
+    // h2 등장
+    $('main h2').addClass('on');
+    // main .txtBox .description 등장
+    $('main .txtBox .description').addClass('on');
+    // scrollDown 등장
+    $('main .scrollDown').addClass('on');
     
 
 

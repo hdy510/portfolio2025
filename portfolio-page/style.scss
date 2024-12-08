@@ -77,6 +77,50 @@ body {
     background-color: $color-blue-main !important; 
 }
 
+/* 텍스트 등장 애니메이션 설정 */
+@mixin textHidden($delay) {
+    opacity: 0;
+    transform: translateY(3rem);
+    transition: transform 1s, opacity 1s;
+    transition-delay: $delay;
+}
+@mixin textAppear {
+    opacity: 1;
+    transform: translateY(0);
+}
+.textAppear1 {
+    @include textHidden(0);
+    &.on {
+        @include textAppear;
+    }
+}
+.textAppear2 {
+    @include textHidden(0.2s);
+    &.on {
+        @include textAppear;
+    }
+}
+.textAppear3 {
+    @include textHidden(0.4s);
+    &.on {
+        @include textAppear;
+    }
+}
+.textAppear4 {
+    @include textHidden(0.6s);
+    &.on {
+        @include textAppear;
+    }
+}
+.textAppear5 {
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 0.8s;
+    &.on {
+        opacity: 1;
+    }
+}
+
 /* header 설정 */
 header {
     width: 100%;
@@ -244,19 +288,31 @@ main {
     }
     img {
         position: absolute;
+        opacity: 0;
         &.main {
             width: 40rem;
             right: -4rem;
             bottom: -24rem;
+            transform: translateY(5rem);
+            transition: transform 2s,opacity 2s;
+            &.on {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         &.blur {
             width: 16rem;
             top: 6rem;
             right: 4rem;
-            transform: scaleX(-1);
+            transform: scaleX(-1) translateY(-3rem);
             z-index: -1;
             filter: blur(0.75rem);
             opacity: 0.8;
+            transition: transform 1.5s,opacity 1.5s;
+            &.on {
+                opacity: 1;
+                transform: scaleX(-1) translateY(0);
+            }
         }
     }
 }
