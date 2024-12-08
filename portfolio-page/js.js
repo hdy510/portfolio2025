@@ -101,7 +101,7 @@ $(document).ready(function () {
 
 
 
-    // concept design 이미지 등장 설정
+    // detailView 이미지 등장 설정
     function handlePortfolioClick() {
         $('.portfolio .btnBox button').click(function () {
             // 현재 클릭된 li 요소
@@ -111,25 +111,25 @@ $(document).ready(function () {
                 cls !== 'contentsBox' && cls !== 'work2024'
             );
             // 해당 브랜드/프로젝트 클래스를 가진 이미지에 'on' 클래스 추가
-            $('.conceptDesign .imgBox img').removeClass('on');
-            $('.conceptDesign .imgBox img').each(function() {
+            $('.detailView .imgBox img').removeClass('on');
+            $('.detailView .imgBox img').each(function() {
                 if ($(this).hasClass(projectNameClass)) {
                     $(this).addClass('on');
                 }
             });
             // 컨텐츠 등장
-            $('.conceptDesign').show().css({'display': 'flex'});
+            $('.detailView').show().css({'display': 'flex'});
         });
     }
     handlePortfolioClick();
-    // concept design 이미지 퇴장 설정
-    $('.conceptDesign button').click(function () {
-        $('.conceptDesign').hide();
-        $('.conceptDesign .imgBox img').removeClass('on');
+    // detailView 이미지 퇴장 설정
+    $('.detailView button').click(function () {
+        $('.detailView').hide();
+        $('.detailView .imgBox img').removeClass('on');
     });
-    // concept design 이미지 스크롤 맨 위로 이동
+    // detailView 이미지 스크롤 맨 위로 이동
     $('.portfolio .btnBox button').click(function () {
-        $('.conceptDesign .imgBox').scrollTop(0);
+        $('.detailView .imgBox').scrollTop(0);
     });
 
 

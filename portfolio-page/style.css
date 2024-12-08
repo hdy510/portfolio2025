@@ -706,8 +706,8 @@ footer p {
   text-align: center;
 }
 
-/* concept design 설정 */
-.conceptDesign {
+/* detailView 설정 */
+.detailView {
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -722,7 +722,7 @@ footer p {
   -webkit-backdrop-filter: blur(0.75rem);
   display: none;
 }
-.conceptDesign .imgBox {
+.detailView .imgBox {
   width: 80%;
   height: 90%;
   overflow-x: hidden;
@@ -730,41 +730,41 @@ footer p {
   scrollbar-color: #1a5ae4 #f4f4f4;
   scrollbar-width: thin;
 }
-.conceptDesign .imgBox::-webkit-scrollbar {
+.detailView .imgBox::-webkit-scrollbar {
   width: 1rem;
 }
-.conceptDesign .imgBox::-webkit-scrollbar-track {
+.detailView .imgBox::-webkit-scrollbar-track {
   background: #f4f4f4;
 }
-.conceptDesign .imgBox::-webkit-scrollbar-thumb {
+.detailView .imgBox::-webkit-scrollbar-thumb {
   background: #1a5ae4;
   border-radius: 0.5rem;
   border: 2px solid #f4f4f4;
 }
-.conceptDesign .imgBox::-webkit-scrollbar-thumb:hover {
+.detailView .imgBox::-webkit-scrollbar-thumb:hover {
   background: #0039b3;
 }
-.conceptDesign .imgBox img {
+.detailView .imgBox img {
   width: 100%;
   display: none;
 }
-.conceptDesign .imgBox img.on {
+.detailView .imgBox img.on {
   display: block;
 }
-.conceptDesign button {
+.detailView button {
   width: 2.625rem;
   height: 2.625rem;
   background: none;
   border: none;
   cursor: pointer;
 }
-.conceptDesign button i {
+.detailView button i {
   display: block;
   font-size: 2.625rem;
   color: #1a5ae4;
   transition: all 0.3s;
 }
-.conceptDesign button:hover i {
+.detailView button:hover i {
   color: #0039b3;
 }
 
@@ -1134,8 +1134,8 @@ footer p {
   footer p {
     font-size: 0.75rem;
   }
-  /* concept design 설정 */
-  .conceptDesign {
+  /* detailView 설정 */
+  .detailView {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
@@ -1239,8 +1239,8 @@ footer p {
   .contact .txtBox .copy-message {
     font-size: 0.875rem;
   }
-  /* concept design 설정 */
-  .conceptDesign button i {
+  /* detailView 설정 */
+  .detailView button i {
     font-size: 2.25rem;
   }
 }/*# sourceMappingURL=style.css.map */
