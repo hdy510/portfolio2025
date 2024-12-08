@@ -766,7 +766,7 @@ main img.blur.on {
 /* footer 설정 */
 footer {
   background-color: #1a5ae4;
-  height: 9.75rem;
+  height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1198,9 +1198,6 @@ footer p {
     transform: scale(0.8);
   }
   /* footer 설정 */
-  footer {
-    height: 6.875rem;
-  }
   footer p {
     font-size: 0.75rem;
   }

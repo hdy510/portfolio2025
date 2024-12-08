@@ -825,7 +825,7 @@ main {
 /* footer 설정 */
 footer {
     background-color: $color-blue-main;
-    height: 9.75rem;
+    height: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1350,7 +1350,6 @@ footer {
     }
     /* footer 설정 */
     footer {
-        height: 6.875rem;
         p {
             font-size: $font-size-12;
         }
