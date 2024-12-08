@@ -386,11 +386,13 @@ main img.blur {
   background-color: transparent;
   border: none;
   padding: 0;
+  align-items: start;
 }
 .aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li.education .listDepth2 li::before {
   content: "•";
   color: #496092;
   margin-right: 0.5rem;
+  height: 1.313rem;
 }
 .aboutMe .cardWrap .txtBox .bottomBox .box2 .listDepth1 > li .mobileSkillsInfo {
   margin-top: 1rem;
@@ -892,6 +894,9 @@ footer p {
     justify-content: center;
     gap: 0.8rem;
   }
+  header .header-wrap .logo {
+    transform: scale(0.9);
+  }
   header .header-wrap .menu {
     margin-right: 0;
   }
@@ -1129,6 +1134,12 @@ footer p {
   footer p {
     font-size: 0.75rem;
   }
+  /* concept design 설정 */
+  .conceptDesign {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
 }
 /* 모바일 구간 */
 @media (max-width: 440px) {
@@ -1227,5 +1238,9 @@ footer p {
   }
   .contact .txtBox .copy-message {
     font-size: 0.875rem;
+  }
+  /* concept design 설정 */
+  .conceptDesign button i {
+    font-size: 2.25rem;
   }
 }/*# sourceMappingURL=style.css.map */

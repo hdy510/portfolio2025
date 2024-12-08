@@ -437,10 +437,12 @@ main {
                                         background-color: transparent;
                                         border: none;
                                         padding: 0;
+                                        align-items: start;
                                         &::before {
                                             content: "•";
                                             color: $color-blue-text;
                                             margin-right: 0.5rem;
+                                            height: 1.313rem;
                                         }
                                     }
                                 }
@@ -839,6 +841,8 @@ footer {
     }
 }
 
+
+
 /* 미디어쿼리 설정 */
 /* 데스크탑 구간 */
 @media (max-width:1200px) { 
@@ -1003,6 +1007,9 @@ footer {
             flex-direction: column;
             justify-content: center;
             gap: 0.8rem;
+            .logo {
+                transform: scale(0.9);
+            }
             .menu {
                 margin-right: 0;
                 li {
@@ -1288,6 +1295,12 @@ footer {
             font-size: $font-size-12;
         }
     }
+    /* concept design 설정 */
+    .conceptDesign {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
 }
 /* 모바일 구간 */
 @media (max-width: 440px) {
@@ -1432,6 +1445,14 @@ footer {
             }
             .copy-message {
                 font-size: $font-size-14;
+            }
+        }
+    }
+    /* concept design 설정 */
+    .conceptDesign {
+        button {
+            i {
+                font-size: 2.25rem;
             }
         }
     }
