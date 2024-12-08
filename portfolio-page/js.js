@@ -45,8 +45,12 @@ $(document).ready(function () {
                 $('h3').siblings('p').removeClass('on');
                 $(section.element).find('h3').addClass('on');
                 $(section.element).find('h3').siblings('p').addClass('on');
-            }
 
+
+                // ellipse 등장 애니메이션
+                $('.ellipse').removeClass('on');
+                $(section.element).find('.ellipse').addClass('on');
+            }
         });
     }
     // 스크롤 이벤트 리스너 추가

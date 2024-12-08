@@ -673,7 +673,11 @@ main img.blur.on {
   position: absolute;
   top: 0%;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%) scale(0.5);
+  transition: transform 0.6s;
+}
+.contact .ellipse.on {
+  transform: translate(-50%, 0%) scale(1);
 }
 .contact .txtBox {
   position: absolute;
