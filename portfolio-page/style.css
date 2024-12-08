@@ -1295,9 +1295,15 @@ footer p {
     padding: 1rem;
   }
   /* contact 설정 */
+  .contact {
+    height: 37.5rem;
+  }
   .contact .ellipse {
     width: 70rem;
     height: 40rem;
+  }
+  .contact .txtBox {
+    top: 10.625rem;
   }
   .contact .txtBox h3 {
     font-size: 1.5rem;

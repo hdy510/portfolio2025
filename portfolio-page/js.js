@@ -37,6 +37,16 @@ $(document).ready(function () {
             if (scrollTop >= sectionTop - 200 && scrollTop < sectionTop + sectionHeight - 200) {
                 $menu.eq(section.index).addClass('on').siblings().removeClass('on');
             }
+
+
+            // h3 등장 애니메이션
+            if (scrollTop >= sectionTop - 600 && scrollTop < sectionTop + sectionHeight - 600) {
+                $('h3').removeClass('on');
+                $('h3').siblings('p').removeClass('on');
+                $(section.element).find('h3').addClass('on');
+                $(section.element).find('h3').siblings('p').addClass('on');
+            }
+
         });
     }
     // 스크롤 이벤트 리스너 추가

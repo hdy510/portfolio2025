@@ -1491,11 +1491,13 @@ footer {
     }
     /* contact 설정 */
     .contact {
+        height: 37.5rem;
         .ellipse {
             width: 70rem;
             height: 40rem;
         }
         .txtBox {
+            top: 10.625rem;
             h3 {
                 font-size: $font-size-24;
             }
