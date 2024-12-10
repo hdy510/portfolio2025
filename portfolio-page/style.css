@@ -580,12 +580,12 @@ main img.blur.on {
   height: 3.375rem;
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 0.5rem;
   font-size: 1rem;
   background-color: #1a5ae4;
   color: #fdfdfd;
   padding: 0.875rem 1.5rem;
+  padding-top: 1rem;
   border-radius: 3.125rem;
   border: 0.063rem solid #1a5ae4;
   cursor: pointer;
@@ -1137,6 +1137,7 @@ footer p {
     height: 3rem;
     font-size: 0.875rem;
     padding: 0.75rem 1.125rem;
+    padding-top: 0.938rem;
   }
   .portfolio .container .contentsBoxWrap .contentsBox .txtBox {
     width: 100%;
