@@ -602,6 +602,7 @@ main {
                         margin-top: 1.875rem;
                         transition: all 0.3s;
                         button {
+                            height: 3.375rem;
                             font-size: $font-size-16;
                             background-color: $color-blue-main;
                             color: #fdfdfd;
@@ -623,8 +624,10 @@ main {
                             }
                         }
                         a {
+                            height: 3.375rem;
                             display: flex;
                             justify-content: center;
+                            align-items: center;
                             gap: 0.5rem;
                             font-size: $font-size-16;
                             background-color: $color-blue-main;
@@ -1257,10 +1260,12 @@ footer {
                             flex-direction: row;
                             gap: 0.625rem;
                             button {
+                                height: 3rem;
                                 font-size: $font-size-14;
                                 padding: 0.75rem 1.125rem;
                             }
                             a {
+                                height: 3rem;
                                 font-size: $font-size-14;
                                 padding: 0.75rem 1.125rem;
                             }
@@ -1451,16 +1456,6 @@ footer {
             }
             .contentsBoxWrap {
                 .contentsBox {
-                    .leftBox {
-                        .btnBox {
-                            button {
-                                font-size: $font-size-12;
-                            }
-                            a {
-                                font-size: $font-size-12;
-                            }
-                        }
-                    }
                     .txtBox {
                         h4 {
                             font-size: $font-size-22;
